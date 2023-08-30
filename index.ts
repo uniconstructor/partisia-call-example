@@ -6,8 +6,8 @@ import { createTender } from "./root-mvp-contract";
 export const initClient = async () => {
     try {
         console.log("initClient")
-        const userAddress = '003eadda927c799ef11a584dd6dca747f2a769d7d7';
-        const contractAddress = '023460205f066896f58bf9cac3e22efcebfb2c484a';
+        //const userAddress = '003eadda927c799ef11a584dd6dca747f2a769d7d7';
+        //const contractAddress = '023460205f066896f58bf9cac3e22efcebfb2c484a';
         const connectionConfig = {
             urlBaseGlobal: { url: 'https://node1.testnet.partisiablockchain.com', shard_id: 0 },
             urlBaseShards: [
@@ -18,14 +18,8 @@ export const initClient = async () => {
         };
         const rpc = PartisiaAccount(connectionConfig);
 
-        let adminPrivateKey: string = "";
-        if (process.env.ROOT_CONTRACT_ADMIN_PRIVATE_KEY != undefined) {
-            adminPrivateKey = process.env.ROOT_CONTRACT_ADMIN_PRIVATE_KEY;
-        }
-        let rootContractAddress: string = "";
-        if (process.env.ROOT_CONTRACT_TESTNET_ADDRESS != undefined) {
-            rootContractAddress = process.env.ROOT_CONTRACT_TESTNET_ADDRESS;
-        }
+        let adminPrivateKey: string = "INSERT_KEY_HERE";
+        let rootContractAddress: string = "023460205f066896f58bf9cac3e22efcebfb2c484a";
         const adminAddress = partisiaCrypto.wallet.privateKeyToAccountAddress(adminPrivateKey);
         // get account info
         const account = await rpc.getAccount(adminAddress);
