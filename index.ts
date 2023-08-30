@@ -69,3 +69,9 @@ export const initClient = async () => {
         //next(error);
     }
 }
+
+(async () => {
+    await initClient();
+})().catch(e => {
+    // Deal with the fact the chain failed
+});
