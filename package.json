@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@partisiablockchain/abi-client-ts": "^3.21.0",
+    "partisia-blockchain-applications-crypto": "^1.0.20",
+    "partisia-blockchain-applications-rpc": "^1.0.10"
+  }
+}
