@@ -1,0 +1,18 @@
+{
+  // These tasks will run in order when initializing your CodeSandbox project.
+  "setupTasks": [
+    {
+      "name": "Install Dependencies",
+      "command": "npm install"
+    }
+  ],
+
+  // These tasks can be run from CodeSandbox. Running one will open a log in the app.
+  "tasks": {
+    "tsx run index.ts": {
+      "name": "tsx run index.ts",
+      "command": "tsx run index.ts",
+      "runAtStart": true
+    }
+  }
+}
