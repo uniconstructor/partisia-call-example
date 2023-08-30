@@ -39,15 +39,6 @@ export const initClient = async () => {
         const tenderId = new BN(7);
         const createTenderPayload = createTender(ownerId, tenderId);
         const dataPayload = partisiaCrypto.structs.serializeToBuffer(createTenderPayload);
-        //const txSerialized = partisiaCrypto.transaction.serializedTransaction(
-        //    { nonce },
-        //    {
-        //        contract: rootContractAddress,
-        //    },
-        //    dataPayload,
-        //);
-        //console.log("txSerialized:", txSerialized);
-
         const txSerialized = partisiaCrypto.transaction.serializedTransaction(
             {
                 nonce,
@@ -66,7 +57,6 @@ export const initClient = async () => {
 
     } catch (error) {
         console.log(error);
-        //next(error);
     }
 }
 
